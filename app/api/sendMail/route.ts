@@ -22,8 +22,8 @@ export async function POST(req: NextRequest) {
 
     // Mail options
     const mailOptions = {
-      from: email, // Sender email
-      to: 'k213910@nu.edu.pk', // Recipient email (replace with your email)
+       // Sender email
+        to: ['designcornerinterior@gmail.com', 'Bhojaniasif@gmail.com'], // Recipient emails (replace with your emails)
       subject: `${name} contacted you: ${subject}`,
       text: `From ${name} \n Email: ${email} \n Phone: ${phone}\n\nMessage: ${message}`,
     };
