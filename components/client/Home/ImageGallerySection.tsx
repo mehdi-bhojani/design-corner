@@ -4,27 +4,35 @@ import { motion } from 'framer-motion'; // Import framer-motion for animations
 
 const ImageGallerySection: React.FC = () => {
   // Define a state to track the active tab
-  const [activeTab, setActiveTab] = useState<string>('residential');
+  const [activeTab, setActiveTab] = useState<string>('dining');
 
   // Tabs data
   const tabs = [
     {
-      id: 'residential',
-      title: 'Residential design',
-      img: '/image-gallery/1.jpg'
+      id: 'dining',
+      title: 'Dining Spaces',
+      img: '/image-gallery/dine-ins.png'
     },
     {
-      id: 'architecture',
-      title: 'Architecture design',
-      img: '/image-gallery/1.jpg'
+      id: 'workspaces',
+      title: 'Work Spaces',
+      img: '/image-gallery/work-spaces.png'
     },
-    { id: 'interior', title: 'Interior design', img: '/image-gallery/1.jpg' },
     {
-      id: 'commercial',
-      title: 'Commercial design',
-      img: '/image-gallery/1.jpg'
+      id: 'coffeeshop',
+      title: 'Coffee Shop',
+      img: '/image-gallery/coffee%20shop.png'
     },
-    { id: 'kitchen', title: 'Kitchen design', img: '/image-gallery/1.jpg' }
+    {
+      id: 'livingroom',
+      title: 'Living Room',
+      img: '/image-gallery/living-room.png'
+    },
+    {
+      id: 'cafe',
+      title: 'Café Design',
+      img: '/image-gallery/caffe.png'
+    }
   ];
 
   return (
@@ -38,13 +46,11 @@ const ImageGallerySection: React.FC = () => {
               <TabsTrigger
                 key={tab.id}
                 value={tab.id}
-                className={`flex-1 rounded-none border border-white/50 px-4 py-4 text-xs font-semibold capitalize leading-normal md:flex-[0_0_20%] md:text-lg   ${
-                  activeTab === tab.id ? 'bg-white' : 'bg-white/5'
-                } ${
-                  index === tabs.length - 1
+                className={`flex-1 rounded-none border border-white/50 px-4 py-4 text-xs font-semibold capitalize leading-normal md:flex-[0_0_20%] md:text-lg   ${activeTab === tab.id ? 'bg-white text-black' : 'bg-white/5 text-white'
+                  } ${index === tabs.length - 1
                     ? 'flex-[0_0_100%]'
                     : 'flex-[0_0_calc(50%)]'
-                }`}
+                  }`}
                 style={{ zIndex: 100 }} // Ensure z-index is high enough
               >
                 {tab.title}
@@ -68,7 +74,7 @@ const ImageGallerySection: React.FC = () => {
                 transition={{ duration: 0.5 }}
               >
                 <div
-                  className="flex h-[500px] w-full flex-col items-center justify-center object-cover object-center"
+                  className="flex h-[500px] w-full flex-col items-center justify-center object-cover object-center relative"
                   style={{
                     backgroundImage: `url(${tab.img})`,
                     objectFit: 'cover',
@@ -77,11 +83,11 @@ const ImageGallerySection: React.FC = () => {
                     backgroundPosition: 'center'
                   }}
                 >
-                  <h3 className="text-2xl font-semibold">{tab.title}</h3>
-                  <p>
-                    Content for {tab.title} goes here. You can customize this
-                    area with your images or descriptions.
-                  </p>
+                  {/* Dark overlay for better text visibility */}
+                  <div className="absolute inset-0 bg-black/40"></div>
+                  <div className="relative z-10 text-white">
+                    <h3 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-2xl text-white uppercase tracking-wide">{tab.title}</h3>
+                  </div>
                 </div>
               </motion.div>
             </TabsContent>

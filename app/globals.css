@@ -1533,17 +1533,9 @@ a:hover {
   overflow: hidden;
 }
 
-#hero-section-one .hero-slider-item.bg-one {
+/* #hero-section-one .hero-slider-item.bg-one {
   background-image: url('../public/hero-slider/1.jpg');
-}
-
-#hero-section-one .hero-slider-item.bg-two {
-  background-image: url('../public/hero-slider/2.jpg');
-}
-
-#hero-section-one .hero-slider-item.bg-three {
-  background-image: url('../public/hero-slider/3.jpg');
-}
+} */
 
 #hero-section-one .hero-counter {
   font-family: 'Heebo', sans-serif;
@@ -1726,7 +1718,7 @@ a:hover {
   color: #ffffff;
   width: 100%;
   height: 100vh;
-  background-image: url('../public/hero-slider/2.jpg');
+  /* background-image: url('../public/hero-slider/2.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1892,7 +1884,7 @@ a:hover {
   color: #ffffff;
   width: 100%;
   height: 100vh;
-  background-image: url('../public/hero-slider/3.jpg');
+  /* background-image: url('../public/hero-slider/3.jpg'); */
   position: relative;
   z-index: 1;
 }
@@ -2385,25 +2377,6 @@ a:hover {
   color: #ffffff;
 }
 
-#rating-section .rating-item.bg-one:hover {
-  background-image: url('../public/bg/rating-hover-bg.jpg');
-}
-
-#rating-section .rating-item.bg-two:hover {
-  background-image: url('../public/bg/rating-hover-bg-2.jpg');
-}
-
-#rating-section .rating-item.bg-three:hover {
-  background-image: url('../public/bg/rating-hover-bg-3.jpg');
-}
-
-#rating-section .rating-item.bg-four:hover {
-  background-image: url('../public/bg/rating-hover-bg-4.jpg');
-}
-
-#rating-section .rating-item.bg-five:hover {
-  background-image: url('../public/bg/rating-hover-bg-5.jpg');
-}
 
 #rating-section .rating-item:hover:before {
   opacity: 1;
@@ -2438,7 +2411,7 @@ a:hover {
 
 #rating-section .rating-item .rating {
   display: block;
-  font-size: 72px;
+  font-size: 3rem;
   font-family: 'Heebo', sans-serif;
   font-weight: 700;
   color: #dddddd;
@@ -2849,30 +2822,11 @@ a:hover {
   margin-top: 50px;
 }
 
-#portfolio-section .portfolio-item,
-#portfolio-section .portfolio-item-sizer {
-  /* width: 25%; */
-}
 
 #portfolio-section .portfolio-item.has-gutter {
   padding: 3px;
 }
 
-#portfolio-section .portfolio-item--width2 {
-  /* width: 50%; */
-}
-
-#portfolio-section .portfolio-item .inner {
-  position: relative;
-  height: 100%;
-}
-
-#portfolio-section .portfolio-item .inner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
 
 #portfolio-section .portfolio-item .overlay {
   position: absolute;
@@ -3695,7 +3649,7 @@ a:hover {
   background-position: center;
 }
 
-#image-gallery-section .tab-content #residential {
+/* #image-gallery-section .tab-content #residential {
   background-image: url('../public/image-gallery/1.jpg');
 }
 
@@ -3713,7 +3667,7 @@ a:hover {
 
 #image-gallery-section .tab-content #kitchen {
   background-image: url('../public/image-gallery/5.jpg');
-}
+} */
 
 #image-gallery-section .tab-content .nav.nav-tabs {
   position: absolute;
@@ -3792,7 +3746,7 @@ a:hover {
 * ====================================
 */
 #cta-section {
-  background-image: url('../public/bg/cta-bg.jpg');
+  /* background-image: url('../public/bg/cta-bg.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -5612,7 +5566,7 @@ a:hover {
 * ====================================
 */
 #not-found-section {
-  background-image: url('../public/image-gallery/3.jpg');
+  /* background-image: url('../public/image-gallery/3.jpg'); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -5662,7 +5616,7 @@ a:hover {
 * ====================================
 */
 #coming-soon-section {
-  background-image: url('../public/image-gallery/3.jpg');
+  /* background-image: url('../public/image-gallery/3.jpg'); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -6324,7 +6278,7 @@ a:hover {
   }
 
   #rating-section .rating-item .rating {
-    font-size: 50px;
+    font-size: 2rem;
     margin-top: 20px;
   }
 
@@ -6342,6 +6296,7 @@ a:hover {
     margin: 0 auto 50px;
   }
 
+  
   #rating-section-two .rating-item h3 {
     margin-bottom: 10px;
   }

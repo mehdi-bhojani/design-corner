@@ -17,24 +17,18 @@ const AboutSection: React.FC = () => {
           <div className="p-[2rem] md:w-1/2 md:p-0">
             <div className="about-section-right ">
               <small className="small-primary">
-                About <span>architectural</span>
+                About <span>Design Corner</span>
               </small>
               <h2 className="leading-10">
-                We are ready to create various architectural designs
+                Transform Your Space with Expert Interior Design Services
               </h2>
               <p className="lead">
-                We believe the designer will be able to design a good for
-                learning sides lead through
+                We create stunning, functional interiors that reflect your personality and enhance your lifestyle
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, nostrud exercitation ullamco laboris nisi
-                ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                Our experienced interior designers specialize in residential and commercial spaces, offering comprehensive design solutions from concept to completion. We combine contemporary trends with timeless elegance to deliver custom interior designs that maximize both aesthetic appeal and functionality. Whether you&apos;re renovating your home, designing a new office, or creating a retail space, our team brings creative vision and professional expertise to every project.
               </p>
-              <button className="btn button-primary">MORE ABOUT US</button>
+              <button className="btn button-primary">DISCOVER OUR PORTFOLIO</button>
             </div>
           </div>
         </div>

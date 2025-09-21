@@ -35,7 +35,7 @@ export default function SwiperThumbs() {
               alt="slide"
               width={1000}
               height={1000}
-              src="/about-section/1.jpg"
+              src="/about-section/about1.png"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -43,7 +43,7 @@ export default function SwiperThumbs() {
               alt="slide"
               width={1000}
               height={1000}
-              src="/about-section/1.jpg"
+              src="/about-section/about2.png"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -51,7 +51,23 @@ export default function SwiperThumbs() {
               alt="slide"
               width={1000}
               height={1000}
-              src="/about-section/1.jpg"
+              src="/about-section/about3.png"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              alt="slide"
+              width={1000}
+              height={1000}
+              src="/about-section/about4.png"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              alt="slide"
+              width={1000}
+              height={1000}
+              src="/about-section/about5.png"
             />
           </SwiperSlide>
           <div className="absolute bottom-5 right-5 z-10 flex -translate-y-1/2 transform gap-1">
@@ -76,14 +92,15 @@ export default function SwiperThumbs() {
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper flex flex-col gap-2"
+          direction="vertical"
+          className="mySwiper flex flex-col gap-2 max-h-[700px] overflow-y-scroll"
         >
           <SwiperSlide>
             <Image
               alt="slide"
               width={1000}
               height={1000}
-              src="/about-section/1.jpg"
+              src="/about-section/about1.png"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -91,7 +108,7 @@ export default function SwiperThumbs() {
               alt="slide"
               width={1000}
               height={1000}
-              src="/about-section/1.jpg"
+              src="/about-section/about2.png"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -99,7 +116,23 @@ export default function SwiperThumbs() {
               alt="slide"
               width={1000}
               height={1000}
-              src="/about-section/1.jpg"
+              src="/about-section/about3.png"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              alt="slide"
+              width={1000}
+              height={1000}
+              src="/about-section/about4.png"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              alt="slide"
+              width={1000}
+              height={1000}
+              src="/about-section/about5.png"
             />
           </SwiperSlide>
         </Swiper>

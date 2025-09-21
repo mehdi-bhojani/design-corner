@@ -14,15 +14,14 @@ import {
 import { Play } from 'lucide-react';
 
 const HeroSection = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
+  const [ setModalOpen] = useState(false);
   return (
     <section id="hero-section-one" className="relative">
       {/* Hero Slider */}
       <Swiper className="hero-slider sm:h-screen">
         {[
-          '/sliding-sidebar.jpg',
-          '/sliding-sidebar.jpg',
-          '/sliding-sidebar.jpg'
+          '/sliding1.png',
+          '/sliding2.png',
         ].map((item, index) => (
           <SwiperSlide
             key={index}
@@ -38,20 +37,29 @@ const HeroSection = () => {
                         <div className="hero-contents">
                           <span className="hero-counter"></span>
                           <h1 className="leading-normal">
-                            Experience
+                            Transform Your
                             <br />
-                            Interior Design
+                            Design Vision
                           </h1>
                           <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor ncididunt ut labore
-                            dolore
+                            Discover exceptional design solutions that bring your
+                            creative ideas to life. From concept to completion,
+                            we craft stunning visual experiences.
                           </p>
-                          <button className="btn button-primary">
-                            See Project
+                          <button
+                            className="btn button-primary"
+                            onClick={() => {
+                              const portfolioSection = document.querySelector('#portfolio-section');
+                              portfolioSection?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                          >
+                            View Portfolio
                           </button>
-                          <button className="btn button-secondary-white">
-                            Get Contact
+                          <button
+                            className="btn button-secondary-white"
+                            onClick={() => window.open('https://wa.link/p9muv6', '_blank')}
+                          >
+                            Start Project
                           </button>
                         </div>
                       </div>
@@ -59,7 +67,7 @@ const HeroSection = () => {
                   </div>
                 </div>
               </div>
-              <span className="date">Publish - Jan 02, 2019</span>
+              <span className="date">Latest Work - Jan 01, 2025</span>
             </div>
           </SwiperSlide>
         ))}

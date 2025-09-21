@@ -1,143 +1,87 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const RatingSection: React.FC = () => {
   return (
     <section id="rating-section">
-      <div className="rating-item bg-one">
-        <div className="icon">
-          <Link href="/path-to-design">
-            <Image
-              src="/icons/design.png"
-              className="default-icon"
-              alt="Design Icon"
-              width={50}
-              height={50}
-            />
-            <Image
-              src="/icons/design-light.png"
-              className="hover-icon"
-              alt="Design Icon Light"
-              width={50}
-              height={50}
-            />
-          </Link>
+      <div className="rating-item bg-one group relative overflow-hidden" style={{backgroundImage: 'url("/rating/ceiling.png")'}}>
+        <div className="absolute inset-0 bg-black bg-opacity-60 group-hover:bg-opacity-0 transition-all duration-300"></div>
+        <div className="relative z-10 group-hover:opacity-0 transition-opacity duration-300">
+          <div className="icon">
+            <Link href="/gypsum-ceiling">
+            </Link>
+          </div>
+          <h3 className="text-white">Gypsum & False Ceiling</h3>
+          <p className="text-white">
+            Transform your space with premium gypsum board ceilings, suspension systems,
+            and elegant molding frames that redefine modern interiors.
+          </p>
+          <span className="rating text-white">Most Popular</span>
         </div>
-        <h3>Design our own</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur ng elit, sed do eiusmod tempor
-          incididunt ut re magna aliqu enim ad minim
-        </p>
-        <span className="rating">93%</span>
       </div>
 
-      <div className="rating-item bg-two">
-        <div className="icon">
-          <Link href="/path-to-award">
-            <Image
-              src="/icons/award.png"
-              className="default-icon"
-              alt="Award Icon"
-              width={50}
-              height={50}
-            />
-            <Image
-              src="/icons/award-light.png"
-              className="hover-icon"
-              alt="Award Icon Light"
-              width={50}
-              height={50}
-            />
-          </Link>
+      <div className="rating-item bg-two group relative overflow-hidden" style={{backgroundImage: 'url("/rating/paint.png")'}}>
+        <div className="absolute inset-0 bg-black bg-opacity-60 group-hover:bg-opacity-0 transition-all duration-300"></div>
+        <div className="relative z-10 group-hover:opacity-0 transition-opacity duration-300">
+          <div className="icon">
+            <Link href="/painting-services">
+            </Link>
+          </div>
+          <h3 className="text-white">Premium Painting</h3>
+          <p className="text-white">
+            Expert interior and exterior painting services with your choice of
+            premium materials for stunning, long-lasting finishes.
+          </p>
+          <span className="rating text-white">Quick Delivery</span>
         </div>
-        <h3>Award winning</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur ng elit, sed do eiusmod tempor
-          incididunt ut re magna aliqu enim ad minim
-        </p>
-        <span className="rating">85%</span>
       </div>
 
-      <div className="rating-item bg-three">
-        <div className="icon">
-          <Link href="/path-to-support">
-            <Image
-              src="/icons/support.png"
-              className="default-icon"
-              alt="Support Icon"
-              width={50}
-              height={50}
-            />
-            <Image
-              src="/icons/support-light.png"
-              className="hover-icon"
-              alt="Support Icon Light"
-              width={50}
-              height={50}
-            />
-          </Link>
+      <div className="rating-item bg-three group relative overflow-hidden" style={{backgroundImage: 'url("/rating/carpentor.png")'}}>
+        <div className="absolute inset-0 bg-black bg-opacity-60 group-hover:bg-opacity-0 transition-all duration-300"></div>
+        <div className="relative z-10 group-hover:opacity-0 transition-opacity duration-300">
+          <div className="icon">
+            <Link href="/wooden-works">
+            </Link>
+          </div>
+          <h3 className="text-white">Custom Wooden Works</h3>
+          <p className="text-white">
+            Bespoke kitchen cabinets, wardrobes, and interior wooden cladding
+            crafted to perfection with attention to every detail.
+          </p>
+          <span className="rating text-white">Best Quality</span>
         </div>
-        <h3>24 / 7 Support</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur ng elit, sed do eiusmod tempor
-          incididunt ut re magna aliqu enim ad minim
-        </p>
-        <span className="rating">97%</span>
       </div>
 
-      <div className="rating-item bg-four">
-        <div className="icon">
-          <Link href="/path-to-consultation">
-            <Image
-              src="/icons/consultation.png"
-              className="default-icon"
-              alt="Consultation Icon"
-              width={50}
-              height={50}
-            />
-            <Image
-              src="/icons/consultation-light.png"
-              className="hover-icon"
-              alt="Consultation Icon Light"
-              width={50}
-              height={50}
-            />
-          </Link>
+      <div className="rating-item bg-four group relative overflow-hidden" style={{backgroundImage: 'url("/rating/cladding.png")'}}>
+        <div className="absolute inset-0 bg-black bg-opacity-60 group-hover:bg-opacity-0 transition-all duration-300"></div>
+        <div className="relative z-10 group-hover:opacity-0 transition-opacity duration-300">
+          <div className="icon">
+            <Link href="/wall-cladding">
+            </Link>
+          </div>
+          <h3 className="text-white">Interior Cladding</h3>
+          <p className="text-white">
+            Luxurious wall cladding solutions including marble, porcelain, fabric,
+            and decorative options to elevate your interior design.
+          </p>
+          <span className="rating text-white">Trending</span>
         </div>
-        <h3>Free consultation</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur ng elit, sed do eiusmod tempor
-          incididunt ut re magna aliqu enim ad minim
-        </p>
-        <span className="rating">88%</span>
       </div>
 
-      <div className="rating-item bg-five">
-        <div className="icon">
-          <Link href="/path-to-delivery">
-            <Image
-              src="/icons/delivery.png"
-              className="default-icon"
-              alt="Delivery Icon"
-              width={50}
-              height={50}
-            />
-            <Image
-              src="/icons/delivery-light.png"
-              className="hover-icon"
-              alt="Delivery Icon Light"
-              width={50}
-              height={50}
-            />
-          </Link>
+      <div className="rating-item bg-five group relative overflow-hidden" style={{backgroundImage: 'url("/rating/marble.png")'}}>
+        <div className="absolute inset-0 bg-black bg-opacity-60 group-hover:bg-opacity-0 transition-all duration-300"></div>
+        <div className="relative z-10 group-hover:opacity-0 transition-opacity duration-300">
+          <div className="icon">
+            <Link href="/marble-ceramics">
+            </Link>
+          </div>
+          <h3 className="text-white">Marble & Ceramics</h3>
+          <p className="text-white">
+            Premium marble, granite, and porcelain installations including countertops,
+            stairs, and elegant tile work for sophisticated spaces.
+          </p>
+          <span className="rating text-white">Premium Choice</span>
         </div>
-        <h3>Quick delivery</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur ng elit, sed do eiusmod tempor
-          incididunt ut re magna aliqu enim ad minim
-        </p>
-        <span className="rating">99%</span>
       </div>
     </section>
   );

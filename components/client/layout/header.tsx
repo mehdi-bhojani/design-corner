@@ -1,6 +1,7 @@
+"use client";
+
 import { Sheet, SheetTrigger, SheetContent } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -9,113 +10,124 @@ import {
 import ThemeToggle from '@/components/layout/ThemeToggle/theme-toggle';
 
 export default function Component() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
+    <header
+      className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 border-b border-amber-200/20 backdrop-blur-sm relative"
+      style={{
+        background: 'linear-gradient(to right, #b87f3d 50%, #c79153 50%)'
+      }}
+    >
+      {/* Mobile Menu */}
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="outline" size="icon" className="lg:hidden">
+          <Button variant="ghost" size="icon" className="lg:hidden text-white hover:bg-white/10">
             <MenuIcon className="h-6 w-6" />
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="left">
-          <Link href="#" prefetch={false}>
-            <ShirtIcon className="h-6 w-6" />
-            <span className="sr-only">ShadCN</span>
-          </Link>
-          <div className="grid gap-2 py-6">
-            <Link
-              href="/"
-              className="flex w-full items-center py-2 text-lg font-semibold"
-              prefetch={false}
+        <SheetContent side="left" className="w-80">
+          <div className="flex items-center gap-2 pb-6 border-b">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-amber-600 to-amber-700 flex items-center justify-center">
+            </div>
+            <span className="text-xl font-bold text-gray-900">Design Corner</span>
+          </div>
+          <nav className="grid gap-1 py-6">
+            <button
+              onClick={() => scrollToSection('home')}
+              className="flex items-center py-3 px-4 text-lg font-medium rounded-lg hover:bg-gray-100 transition-colors text-left"
             >
               Home
-            </Link>
-            <Link
-              href="about"
-              className="flex w-full items-center py-2 text-lg font-semibold"
-              prefetch={false}
+            </button>
+            <button
+              onClick={() => scrollToSection('about')}
+              className="flex items-center py-3 px-4 text-lg font-medium rounded-lg hover:bg-gray-100 transition-colors text-left"
             >
               About
-            </Link>
-            <Link
-              href="service"
-              className="flex w-full items-center py-2 text-lg font-semibold"
-              prefetch={false}
+            </button>
+            <button
+              onClick={() => scrollToSection('services')}
+              className="flex items-center py-3 px-4 text-lg font-medium rounded-lg hover:bg-gray-100 transition-colors text-left"
             >
               Services
-            </Link>
-            <Link
-              href="portfolio"
-              className="flex w-full items-center py-2 text-lg font-semibold"
-              prefetch={false}
+            </button>
+            <button
+              onClick={() => scrollToSection('portfolio')}
+              className="flex items-center py-3 px-4 text-lg font-medium rounded-lg hover:bg-gray-100 transition-colors text-left"
             >
               Portfolio
-            </Link>
-            <Link
-              href="contact"
-              className="flex w-full items-center py-2 text-lg font-semibold"
-              prefetch={false}
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="flex items-center py-3 px-4 text-lg font-medium rounded-lg hover:bg-gray-100 transition-colors text-left"
             >
               Contact
-            </Link>
-          </div>
+            </button>
+          </nav>
         </SheetContent>
       </Sheet>
-      <Link href="#" className="mr-6 hidden lg:flex" prefetch={false}>
-        <ShirtIcon className="h-6 w-6" />
-        <span className="sr-only">ShadCN</span>
-      </Link>
+
+      {/* Logo */}
+      <button onClick={() => scrollToSection('home')} className="flex items-center gap-3 mr-8">
+        <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center">
+        </div>
+        <span className="hidden md:block text-xl font-bold text-white">Design Corner</span>
+      </button>
+
+      {/* Desktop Navigation */}
       <NavigationMenu className="hidden lg:flex">
-        <NavigationMenuList>
+        <NavigationMenuList className="gap-2">
           <NavigationMenuLink asChild>
-            <Link
-              href="/"
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-transparent dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-              prefetch={false}
+            <button
+              onClick={() => scrollToSection('home')}
+              className="group inline-flex h-10 items-center justify-center rounded-lg px-6 py-2 text-sm font-medium text-white/90 transition-all duration-200 hover:text-white hover:bg-white/10 focus:bg-white/10 focus:text-white focus:outline-none"
             >
               Home
-            </Link>
+            </button>
           </NavigationMenuLink>
           <NavigationMenuLink asChild>
-            <Link
-              href="about"
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-transparent dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-              prefetch={false}
+            <button
+              onClick={() => scrollToSection('about')}
+              className="group inline-flex h-10 items-center justify-center rounded-lg px-6 py-2 text-sm font-medium text-white/90 transition-all duration-200 hover:text-white hover:bg-white/10 focus:bg-white/10 focus:text-white focus:outline-none"
             >
               About
-            </Link>
+            </button>
           </NavigationMenuLink>
           <NavigationMenuLink asChild>
-            <Link
-              href="services"
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-transparent dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-              prefetch={false}
+            <button
+              onClick={() => scrollToSection('services')}
+              className="group inline-flex h-10 items-center justify-center rounded-lg px-6 py-2 text-sm font-medium text-white/90 transition-all duration-200 hover:text-white hover:bg-white/10 focus:bg-white/10 focus:text-white focus:outline-none"
             >
               Services
-            </Link>
+            </button>
           </NavigationMenuLink>
           <NavigationMenuLink asChild>
-            <Link
-              href="portfolio"
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-transparent dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-              prefetch={false}
+            <button
+              onClick={() => scrollToSection('portfolio')}
+              className="group inline-flex h-10 items-center justify-center rounded-lg px-6 py-2 text-sm font-medium text-white/90 transition-all duration-200 hover:text-white hover:bg-white/10 focus:bg-white/10 focus:text-white focus:outline-none"
             >
               Portfolio
-            </Link>
+            </button>
           </NavigationMenuLink>
           <NavigationMenuLink asChild>
-            <Link
-              href="contact"
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-transparent dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-              prefetch={false}
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="group inline-flex h-10 items-center justify-center rounded-lg px-6 py-2 text-sm font-medium text-white/90 transition-all duration-200 hover:text-white hover:bg-white/10 focus:bg-white/10 focus:text-white focus:outline-none"
             >
               Contact
-            </Link>
+            </button>
           </NavigationMenuLink>
         </NavigationMenuList>
       </NavigationMenu>
-      <div className="ml-auto flex gap-2">
+
+      {/* Right Side Actions */}
+      <div className="ml-auto flex items-center gap-3">
         <ThemeToggle />
       </div>
     </header>

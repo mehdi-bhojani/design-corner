@@ -8,28 +8,26 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* About Us */}
           <div>
-            <h3 className="mb-4 text-xl font-bold">About Us</h3>
-            <p className="text-sm ">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <h3 className="mb-4 text-xl font-bold">About Design Corner</h3>
+            <p className="text-sm">
+              We are a premium interior design studio specializing in residential and commercial spaces. 
+              Our team creates beautiful, functional environments that reflect your style and enhance 
+              your lifestyle through thoughtful design solutions.
             </p>
             <p className="mt-4 flex flex-col gap-2 text-sm">
               <span>
-                {' '}
-                <strong>Address:</strong> 651 Fifth Avenue, 36th New York, NY
-                546{' '}
+                <strong>Address:</strong> shop # 8, Aniqa Arcade, Main Numaish, <br />Near Chipa Ambulance Centre, Karachi
               </span>
               <span>
-                {' '}
                 <strong>Phone:</strong>{' '}
-                <a href="tel:(+080)46893578" className="text-primary">
-                  (+080) 4689 35 78
+                <a href="tel:(+92)3343515283" className="text-primary">
+                  (+92) 3343515283
                 </a>
               </span>
               <span>
                 <strong>Email:</strong>{' '}
-                <a href="mailto:myemail@kyanite.com" className="text-primary">
-                  myemail@kyanite.com
+                <a href="mailto:designcornerbyasifbhojani@gmail.com" className="text-primary">
+                  designcornerbyasifbhojani@gmail.com
                 </a>
               </span>
             </p>
@@ -44,7 +42,7 @@ export default function Footer() {
                   (item, index) => (
                     <li key={index}>
                       <Link
-                        href={`${item === 'Home' ? '/' : item.toLowerCase()}`}
+                        href={`${item === 'Home' ? '/' : '/' + item.toLowerCase()}`}
                         className=" hover:text-primary"
                       >
                         {item}
@@ -53,45 +51,45 @@ export default function Footer() {
                   )
                 )}
               </ul>
-              <ul className="text-md space-y-4">
+              {/* <ul className="text-md space-y-4">
                 {['FAQ', 'Pricing', 'Blog', 'Contact'].map((item, index) => (
                   <li key={index}>
                     <Link
-                      href={`${item === 'Home' ? '/' : item.toLowerCase()}`}
+                      href={`/${item.toLowerCase()}`}
                       className=" hover:text-primary"
                     >
                       {item}
                     </Link>
                   </li>
                 ))}
-              </ul>
+              </ul> */}
             </div>
           </div>
 
-          {/* Popular Post */}
+          {/* Recent Projects */}
           <div>
-            <h3 className="mb-4 text-xl font-bold">Recent Projects</h3>
+            <h3 className="mb-4 text-xl font-bold">Interior Design Projects</h3>
             <div className="space-y-4">
               <div className="flex space-x-4">
-                <div className="h-16 w-16 rounded bg-zinc-700"></div>
+                <div className="h-16 w-16 rounded bg-gradient-to-br from-amber-500 to-orange-600"></div>
                 <div className="flex-1">
                   <h4>
-                    <Link href="#" className="text-primary hover:underline">
-                      There are 10 professional bre in our training center
+                    <Link href="/portfolio/modern-apartment" className="text-primary hover:underline">
+                      Modern Apartment Living Room Design
                     </Link>
                   </h4>
-                  <p className="text-xs text-zinc-300">February 15, 2019</p>
+                  <p className="text-xs text-zinc-300">January 15, 2025</p>
                 </div>
               </div>
               <div className="flex space-x-4">
-                <div className="h-16 w-16 rounded bg-zinc-700"></div>
+                <div className="h-16 w-16 rounded bg-gradient-to-br from-rose-500 to-pink-600"></div>
                 <div className="flex-1">
                   <h4>
-                    <Link href="#" className="text-primary hover:underline">
-                      I used to love the clock to play life in a very beautiful
+                    <Link href="/portfolio/luxury-bedroom" className="text-primary hover:underline">
+                      Luxury Master Bedroom Suite Design
                     </Link>
                   </h4>
-                  <p className="text-xs text-zinc-300">March 25, 2019</p>
+                  <p className="text-xs text-zinc-300">December 8, 2024</p>
                 </div>
               </div>
             </div>
@@ -101,13 +99,13 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="mt-8 border-t border-zinc-800 pt-6">
           <div className="flex flex-col justify-between text-sm text-zinc-400 md:flex-row">
-            <p>&copy; 2024 Design Corner. All Rights Reserved.</p>
+            <p>&copy; 2025 Design Corner. All Rights Reserved.</p>
             <ul className="mt-4 flex space-x-4 md:mt-0">
-              {['Home', 'About', 'Services', 'Portfolio', 'FAQ'].map(
+              {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map(
                 (item, index) => (
                   <li key={index}>
                     <Link
-                      href={`${item === 'Home' ? '/' : item.toLowerCase()}`}
+                      href={`${item === 'Home' ? '/' : '/' + item.toLowerCase()}`}
                       className="hover:text-primary"
                     >
                       {item}

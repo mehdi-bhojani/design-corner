@@ -27,7 +27,7 @@ const MapComponent: React.FC = () => {
       };
 
       // Map options
-      const mapOptions: google.maps.MapOptions = {
+      const mapOptions = {
         center: position,
         zoom: 17,
         mapId: "MY_NEXTJS_MAPID", // Ensure this is a valid Map ID in Google Maps

@@ -1,9 +1,9 @@
 'use client';
 
 import AboutSection from '@/components/client/Home/AboutSection';
-import AwardsSection from '@/components/client/Home/AwardsSection';
+// import AwardsSection from '@/components/client/Home/AwardsSection';
 import CtaSection from '@/components/client/Home/CtaSection';
-import FeaturedSection from '@/components/client/Home/FeaturedSection';
+// import FeaturedSection from '@/components/client/Home/FeaturedSection';
 import HeroSection from '@/components/client/Home/HeroSection';
 import ImageGallerySection from '@/components/client/Home/ImageGallerySection';
 import PortfolioSection from '@/components/client/Home/PortfolioSection';
@@ -17,11 +17,11 @@ function Page() {
       <HeroSection />
       <RatingSection />
       <AboutSection />
-      <FeaturedSection />
+      {/* <FeaturedSection /> */}
       <PortfolioSection />
       <ServiceSection />
       <ImageGallerySection />
-      <AwardsSection />
+      {/* <AwardsSection /> */}
       <CtaSection />
     </div>
   );
